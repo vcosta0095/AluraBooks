@@ -1,0 +1,29 @@
+@import url(styles/header.css);
+@import url(styles/Banner.css);
+@import url(styles/carrosel.css);
+@import url(styles/topicos.css);
+@import url(styles/contato.css);
+@import url(styles/footer.css);
+
+:root{
+
+    --cor-de-fundo: #EBECEE;
+    --cor-azul-principal: #002F52;
+    --cor-laranja-principal: #EB9B00;
+    --cor-preta-principal:  #000000;
+    --cor-branca-principal: #FFFFFF;
+    --azul-gradiente: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --cinza: #858585;
+    --fonte-principal: "Poppins";
+    --fonte-secundaria: "Josefin sans";
+    --cinza-escuro: #474646;
+    
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+

@@ -1,0 +1,348 @@
+/* Edita titulo da section carrosel */
+
+.carrosel__titulo{
+
+    color: var(--cor-laranja-principal);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1em 0 0.5em 0;
+    background-color: var(--cor-branca-principal);
+
+}
+
+/* Edita a caixa do carrosel */
+.swiper{
+    background-color: var(--cor-de-fundo);
+}
+
+/* Edita os elementos do carrosel, aqui editei o tamando da imagem */
+.swiper-slide img{
+
+    width: 100%;
+}
+
+/* Edita a paginação(....) da pagina */
+.swiper-pagination{
+
+    position: initial;
+    margin: 0.5em 0;
+}
+
+/* Edita os botões do carrosel */
+.swiper-button-prev, .swiper-button-next{
+
+    display: none;
+}
+
+/* Edita o scrollbar do carrosel */
+.swiper-scrollbar{
+
+    display: none;
+}
+
+.cartao{
+
+    background: var(--cor-branca-principal);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em;
+
+}
+
+.cartao__descricao{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartao__descricao__subtitulo{
+
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--cor-laranja-principal);
+}
+
+.cartao__descricao__titulo{
+
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--cor-azul-principal);
+    padding: 0.5em 0 0.5em 0;
+
+}
+
+.cartao__descricao__texto{
+
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+
+.cartao__descricao__imagem{
+
+    margin-bottom: 1em;
+}
+
+.cartao__botao{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.botao__lista{
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.cartao__botao__link{
+
+    border: 1px solid transparent;
+    background-color: var(--cor-laranja-principal);
+    padding: 1.5em 2.1em;
+    color: var(--cor-branca-principal);
+    font-weight: 700;
+}
+
+.carrosel__secundario--titulo{
+
+    background-color: var(--cor-branca-principal);
+    color: var(--cor-laranja-principal);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 1em 0 1em 0;
+    text-transform: uppercase;
+}
+
+/* Editao o corpo cartão */
+.cartao__secudario{
+
+    background: var(--cor-branca-principal);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em;
+}
+
+/* edita o corpo dos textos no cartão*/
+.descricao__secundario{
+
+    margin-right: 1em;
+
+}
+
+/*  Edita os elementos(texto/imagens) do corpo do cartão*/
+.cartao__secundario--descricao{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4em;
+}
+
+/* Edita o titulo do cartão secundario */
+.cartao__secundario__titulo{
+
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--cor-laranja-principal);
+    line-height: 24px;
+}
+
+/* Edita o subtitulo do cartão secundario */
+.cartao__secundario__subtitulo{
+
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--cor-azul-principal);
+    
+}
+
+/* Edita a descrição do cartão secundario */
+.cartao__secundario__descricao{
+
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--cor-preta-principal);
+    margin-top: 0.5em;
+    
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+    /* Edita o titulo do carrosel */
+    .carrosel__titulo{
+
+        font-size: 26px;
+        font-weight: 700;
+        padding: 2em 0 1em 0;
+    }
+
+    /* Edita a paginação do carrosel */
+    .swiper-pagination{
+
+        margin: 2em 0 3em 0;
+    }
+
+    /* Edita a barra de deslise (com livros) do carrosel */
+
+    .swiper{
+
+        width: 60%;
+        padding: 0 3em 0 3em;
+    }
+
+    /* Edita os botões da barra de deslise do carrosel */
+    .swiper-button-prev, .swiper-button-next{
+        display:block;
+        top: 60%;
+    }
+
+
+
+    /* Edita a cartão do carrosel */
+    .cartao{
+
+        width: 40%;
+        margin: 2em auto;
+        padding: 1.5em 1.5em;
+    }
+
+    /* Editão o botão do cartão do carrosel */
+    .cartao__botao__link{
+
+        padding: 1.5em 1.5em;
+        text-align: center;
+    }
+    
+    /* Edita o titulo do cartão do  */
+    .carrosel__secundario--titulo{
+
+        font-size: 26px;
+        font-weight: 700;
+        padding: 2em 0 1em 0;
+    }
+
+    /* Edita a caixa do cartão secundario do carrosel */
+
+    .cartao__secudario{
+
+        width: 40%;
+        margin: 2em auto;
+        padding: 1.5em 1.5em;
+    }
+    
+}
+
+/* Edita a versão desktop */
+@media screen and (min-width: 1728px) {
+
+    .carrosel__titulo{
+
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .container__carrosel{
+
+        display: flex;
+        align-items: center;
+        /* Alternativa 2em 20vw 3em 20vw */
+        margin: 2em 6em 5em 6em; 
+    }
+    
+    /* Edita a paginação do carrosel */
+    .swiper-pagination{
+
+        margin: 1em 0;
+    }
+
+    /* Edita o carrosel */
+    .swiper{
+
+        width: 50%;
+    }
+
+    /* Edita o subtitulo do carrosel */
+    .cartao__descricao__subtitulo{
+
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    /* Edita a descrição do titulo do carrosel */
+    .cartao__descricao__titulo{
+
+        font-size: 18px;
+        font-weight: 700;
+    }
+   
+    /* Edita o texto da descrição do carrosel */
+    .cartao__descricao__texto{
+
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    /* Edita o cartão do carrosel */
+
+    .cartao{
+
+        width: 60%;
+        margin-left: 1.5em;
+    }
+
+    /* Edita a descrição do carrosel */
+    .descricao{
+
+        margin-right: 3em;
+    }
+
+    /* Edita a imagem do carrosel */
+
+    .cartao__secundario__imagem{
+
+        margin-bottom: 1em;
+    }
+
+    /* Edita o titulo da descrição do carrosel */
+    .carrosel__secundario--titulo{
+
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    /* Edita o cartão secundario */
+
+    .cartao__secudario{
+
+        width: 60%;
+    }
+
+    /* Edita o titulo do cartão secundario */
+    .cartao__secundario__titulo{
+
+        font-size: 32px;
+        font-weight: 700;
+    }   
+
+    /* Edita o subtitulo do cartão secundario */
+    .cartao__secundario__subtitulo{
+
+        font-size: 18px;
+        font-weight: 700;
+        margin: 1em 0;
+    }
+    
+    /* Edita a descrição do cartão secundario */
+    .cartao__secundario__descricao{
+
+        font-size: 14px;
+        font-weight: 400;
+    }
+}

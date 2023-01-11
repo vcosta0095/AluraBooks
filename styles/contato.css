@@ -1,0 +1,115 @@
+/* edita a caixa do contato */
+.contato{
+
+    background-color: var(--cor-branca-principal);
+    padding: 1em 1.5em;
+}
+/* edita o titulo do contato */
+.contato__titulo{
+
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--cor-azul-principal);
+    margin: 1em 0 0.5em 0;
+}
+
+/* Edita o texto do contato */
+.contato__texto{
+
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--cor-azul-principal);
+    margin-bottom: 1em;
+}
+
+/* Edita a barra de email */
+.contato__email{
+
+    border: 1px solid var(--cor-azul-principal);
+    border-radius: 24px;
+    width: 90%;
+    background-color: transparent;
+    padding: 0.5em;
+    color: var(--cor-azul-principal);
+}
+
+/* Edita o conteudo da barra de pesquisa */
+.contato__email::placeholder{
+
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--cor-azul-principal);
+    background-image: url(../img/Email.svg);
+    background-repeat: no-repeat;
+    background-position: 1em;
+    padding-left: 3em ;
+    
+}
+
+@media screen and (min-width: 1024px){
+
+    /* Edita a caixa de contato transformando ele em flex container */
+    .contato{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Edita a caixa dos textos do contato */
+    .contato__textos{
+
+        width: 30%;
+        margin-right: 1em;
+    }
+
+    /* Edita o titulo do contato */
+
+    .contato__titulo{
+
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+/* Edita o texto do contato */
+    .contato__texto{
+
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+/* Edita a barra de email */
+    .contato__email{
+            
+        width: 35%;
+    }
+}
+
+@media screen and (min-width: 1728px){
+
+
+    .contato{
+
+        padding: 3em 20vw;
+    }
+
+
+
+    .contato__titulo{
+
+        font-size: 24px;
+        font-weight: 500;
+    }
+    
+    .contato__texto{
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .contato__email::placeholder{
+
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+}

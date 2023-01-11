@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Books</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Changa:wght@200&family=Inter:wght@400;700&family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+<link href="https://fonts.googleapis.com/css2?family=Changa:wght@200&family=Inter:wght@400;700&family=Josefin+Sans:wght@400;700&family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilo.css">
+   
+</head>
+<body>
+       <!-- 1° Duas divs(caixas) para separar os elementos, 2 na esquerda e 3 na direita -->
+       <!-- 2° Editar cabeçalho em header.css -->
+       <!-- 3° Criando menu hamburguer. Adicionei input/label que fica dentro da tag span, depois adicionei uma lista após label -->
+        <header class="cabecalho">
+            <div class="container">
+                <input type="checkbox" id="menu" class="container__menu">
+                <!-- 4° adicionei a classe "container__rotulo" para ao clicar na versão mobile o menu hamburguer mudar de cor -->
+                <label for="menu" class="container__rotulo">
+                <span class="cabecalho__menu--hamburguer container__imagem"></span>
+                </label>
+                <ul class="lista__menu">
+                    <li class="lista__menu--titulo">Categorias</li>
+                    <li class="lista__menu--item"><a href="#" class="lista__menu--link">Programação</a></li>
+                    <li class="lista__menu--item"><a href="#" class="lista__menu--link">Front-End</a></li>
+                    <li class="lista__menu--item"><a href="#" class="lista__menu--link">Infraestrutura</a></li>
+                    <li class="lista__menu--item"><a href="#" class="lista__menu--link">Business</a></li>
+                    <li class="lista__menu--item"><a href="#" class="lista__menu--link">Design & UX</a></li>
+                </ul>
+                <img src="./img/Logo.svg" class="container__imagem" alt="Logo da AluraBooks">
+
+                <!-- 1° Adiciona o nome AluraBooks para a versão de tablet -->
+                <h1 class="cabecalho__titulo"><b class="cabecalho__titulo--negrito">Alura</b>Books</h1>
+            </div>
+
+                <!--  2° Adiciona uma lista para a versão tablet -->
+                <ul class="opcoes">
+
+                    <!-- 3° Edita o menu que aparece ao clica em categorias -->
+                    <input type="checkbox" id="lista" class="botao__opcoes">
+                    <!-- 4° Adiciona a classe container__opções, a classe foi criada para fazer alterações na sessão categoria, como cor de backgorund, textos e etc. -->
+                    <label for="lista" class="container__opcoes">
+                    <li class="opcoes__item">Categorias</li>
+                    </label>
+                    <ul class="lista__botao__opcoes">
+                        <li class="lista__botao__opcoes--item"><a href="#" class="lista__botao__opcoes--link">Programação</a></li>
+                        <li class="lista__botao__opcoes--item"><a href="#" class="lista__botao__opcoes--link">Front-End</a></li>
+                        <li class="lista__botao__opcoes--item"><a href="#" class="lista__botao__opcoes--link">Infraestrutura</a></li>
+                        <li class="lista__botao__opcoes--item"><a href="#" class="lista__botao__opcoes--link">Business</a></li>
+                        <li class="lista__botao__opcoes--item"><a href="#" class="lista__botao__opcoes--link">Design & UX</a></li>
+                    </ul>
+                    <li class="opcoes__item"><a href="#" class="opcoes__item__links">Favoritos</a></li>
+                    <li class="opcoes__item"><a href="#" class="opcoes__item__links">Minha Estante</a></li>
+                </ul>
+
+                <div class="container">
+                <a href="#"><img src="./img/Favoritos.svg" class="container__imagem container__imagem--transparente" alt="Favoritos do AluraBooks"></a>
+                <a href="#">
+                    <img src="./img/Compras.svg" class="container__imagem" alt="Carrinhos de compras do AluraBooks"></a>
+                    <p class="container__texto">Minha Sacola</p>
+                <a href="#">
+                    <img src="./img/Usuário.svg" class="container__imagem" alt="Perfis do AluraBooks"></a>
+                    <p class="container__texto">Meu perfil</p>
+            </div>
+        </header>
+
+        <section class="banner">
+            <h2 class="banner__titulo">Já sabe por onde começar?</h2>
+            <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
+            <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
+        </section>
+    
+        
+    <!-- Fazendo uma sessão em carrosel -->
+        <section class="carrosel">
+            <h2 class="carrosel__titulo">Ultimos Lançamentos</h2>
+
+            <!-- Coloquei outra div(container__carrosel) para deixar os elementos lado a lado na versão desktop(1728px) -->
+            <div class="container__carrosel">
+    <!-- Importação externa do swipe.js -->
+            <!-- Slider main container -->
+<div class="swiper">
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="./img/ApacheKafka.svg" alt="Livro sobre Apache kafka na AluraBooks"></div>
+      <div class="swiper-slide"><img src="./img/Liderança.svg" alt="Livro sobre liderança na AluraBooks"></div>
+      <div class="swiper-slide"><img src="./img/Javascript.svg" alt="Livro sobre javascript na AluraBooks"></div>
+      <div class="swiper-slide"><img src="./img/Nodejs.svg" alt="Livro sobre node.js na AluraBooks"></div>
+      <div class="swiper-slide"><img src="./img/Guia Front-end.svg" alt="Livro sobre guia front-end na AluraBooks"></div>
+      <div class="swiper-slide"><img src="./img/Portugol.svg" alt="Livro sobre portugol na AluraBooks"></div>
+      <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+      <div class="cartao">
+        <!-- 1° linha edita a linha""card__descricao"-->
+        <div class="cartao__descricao">
+            <!-- 1° coluna edita a coluna "descricao" -->
+            <div class="descricao">
+                <h3 class="cartao__descricao__subtitulo">Talvez você também se interesse por...</h3>
+                <h2 class="cartao__descricao__titulo">Angular 11 e Firebase</h2>
+                <p class="cartao__descricao__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
+            </div>
+             <!-- 2°coluna edita a coluna cartao__descricao__imagem-->
+            <img src="./img/Angular1.svg" alt="Foto angular firebase do cartao" class="cartao__descricao__imagem">
+            </div>
+
+            <!-- 2° linha edita o cartao__botao -->
+            <div class="cartao__botao">
+                <!-- 1° coluna edita o botao__lista -->
+                <ul class="botao__lista">
+                    <li class="botao__item"><img src="./img/Favoritos-1.svg" alt="favoritos do cartão"></li>
+                    <li class="botao__item"><img src="./img/Compras.svg" alt="carrinho de compras do cartão"></li>
+                </ul>
+                <!-- 2° coluna edita o cartao__botao__link -->
+                <a href="#" class="cartao__botao__link">Saiba mais</a>
+            </div>
+      </div>
+        </section>
+
+        <section class="carrosel__secundario">
+            <h2 class="carrosel__secundario--titulo">Mais Vendidos</h2>
+            <!-- Slider main container -->
+
+            <div class="container__carrosel">
+            
+<div class="swiper">
+
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="./img/Javascript.svg" alt="imagem da capa do livro apache kafka"></div>
+      <div class="swiper-slide"><img src="./img/ApacheKafka.svg" alt="imagem da capa do livro javascript"></div>
+      <div class="swiper-slide"><img src="./img/UX.svg" alt="imagem da capa do livro UX estrategico"></div>
+      <div class="swiper-slide"><img src="./img/Tuning.svg" alt="imagem da capa do livro turning sql"></div>
+      <div class="swiper-slide"><img src="./img/ReactNative.svg" alt="imagem da capa do livro react native"></div>
+      <div class="swiper-slide"><img src="./img/Portugol.svg" alt="Livro sobre portugol na AluraBooks"></div>
+    </div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+
+  <div class="cartao__secudario">
+    <div class="cartao__secundario--descricao">
+        <div class="descricao__secundario">
+            <p><img src="./img/Estrelinhas.svg" alt="estrelas no titulo do cartão" class="cartao__secundario__imagem"></p>
+            <h2 class="cartao__secundario__titulo">Autora do Mês</h2>
+            <h3 class="cartao__secundario__subtitulo">Juliana Agarikov</h3>
+            <p class="cartao__secundario__descricao">Analista de sistemas e escritora, Juliana é especialista em Front-End.</p>
+        </div>
+        <img src="./img/escritora.svg">
+  </div>
+
+    <div class="cartao__botao">
+        <!-- 1° coluna edita o botao__lista -->
+        <ul class="botao__lista">
+            <li class="botao__item"><img src="./img/Favoritos-1.svg" alt="favoritos do cartão"></li>
+            <li class="botao__item"><img src="./img/Compras.svg" alt="carrinho de compras do cartão"></li>
+        </ul>
+        <!-- 2° coluna edita o cartao__botao__link -->
+        <a href="#" class="cartao__botao__link">Saiba mais</a>
+    </div>
+</div>
+</div>
+        </section>
+
+        <!-- Edita o caixa da sessão topicos -->
+        <section class="topicos">
+                <h2 class="topicos__titulo">Tópicos visitados recentemente</h2>
+                 <ul class="topicos__lista">
+                    <li class="topicos__item">
+                        <a href="#" class="topicos__link">Android</a>
+                    </li>
+                    <li class="topicos__item">
+                        <a href="#" class="topicos__link">Marketing Digital</a>
+                    </li>
+                    <li class="topicos__item">
+                        <a href="#" class="topicos__link">Agile</a>
+                    </li>
+                    <li class="topicos__item">
+                        <a href="#" class="topicos__link">Startups</a>
+                    </li>
+                    <li class="topicos__item">
+                        <a href="#" class="topicos__link">HTML & CSS</a>
+                    </li>
+                    <li class="topicos__item">
+                        <a href="#" class="topicos__link">Python</a>
+                    </li>
+                    <li class="topicos__item">
+                        <a href="#" class="topicos__link">OO</a>
+                    </li>
+                    <li class="topicos__item">
+                        <a href="#" class="topicos__link">Java</a>
+                    </li>
+                 </ul>
+            
+        </section>
+<!-- 1° adicionei o texto para contato e a barra de email, na versão mobile(428px) o texto e a barra ficam um em baixo outro -->
+<!-- 2° adicionei uma div(contato__textos) para separar e alinhar lado a lado o texto com a barra de pesquisa na versão tablet(1024px)  -->
+
+     <section class="contato">
+        <div class="contato__textos">
+            <h2 class="contato__titulo">Fique por dentro das novidades!</h2>
+            <p class="contato__texto">Atualizações de e-books, novos livros, promoções e outros.</p>
+        </div>
+            <input type="email" id="email" placeholder="Cadastre seu e-mail" class="contato__email">
+        </section>
+    
+    <!-- Traça uma linha -->
+    <hr />
+
+    <!-- 1° Adicionei o texto"Grupo alura" no rodapé na versão mobile(428px) -->
+    <!-- 2° Adicionei a lista de item no rodapé na versão tablet(1024px) -->
+        <footer class="rodape">
+            <h3 class="rodape__texto">Grupo Alura</h3>
+            <ul class="lista__rodape">
+                <li class="lista__rodape--titulo">Educação</li>
+                <li class="lista__rodape--item"><img src="./img/Caelum.svg" alt="logo da caelum"><a href="#" class="lista__rodape--link">Caelum</a></li>
+                <li class="lista__rodape--item"><img src="./img/CasaDoCodigo.svg" alt="logo da casa do codigo"><a href="#"  class="lista__rodape--link">Casa do Código</a></li>
+            </ul>
+            <ul class="lista__rodape">
+                <li class="lista__rodape--titulo">Educação Online</li>
+                <li class="lista__rodape--item"><img src="./img/Alura.svg" alt="logo da alura"><a href="#" class="lista__rodape--link">Alura</a></li>
+                <li class="lista__rodape--item"><img src="./img/AluraEmpresas.svg" alt="logo da alura empresas"><a href="#" class="lista__rodape--link">Alura para empresas</a></li>
+                <li class="lista__rodape--item"><img src="./img/AluraLATAM.svg" alt="logo da alura latam"><a href="#" class="lista__rodape--link">Alura Latam</a></li>
+                <li class="lista__rodape--item"><img src="./img/AluraStart.svg" alt="logo da alura start"><a href="#" class="lista__rodape--link">Alura Start</a></li>
+                <li class="lista__rodape--item"><img src="./img/MusicDot.svg" alt="logo da musicdot"><a href="#" class="lista__rodape--link">MusicDot</a></li>
+                <li class="lista__rodape--item"><img src="./img/AluraLingua.svg" alt="logo da alura lingua"><a href="#" class="lista__rodape--link">Alura Lingua</a></li>
+                <li class="lista__rodape--item"><img src="./img/PM3.svg" alt="logo da pm3"><a href="#" class="lista__rodape--link">PM3</a></li>
+            </ul>
+
+            <ul class="lista__rodape">
+                <li class="lista__rodape--titulo">Comunidade</li>
+                <li class="lista__rodape--item"><img src="./img/HipstersTech.svg" alt="logo da Hipsters ponto tech"><a href="#" class="lista__rodape--link">Hipsters ponto Tech</a></li>
+                <li class="lista__rodape--item"><img src="./img/ScubaDev.svg" alt="logo da scuba dev"><a href="#" class="lista__rodape--link">Scuba Dev</a></li>
+                <li class="lista__rodape--item"><img src="./img/LayersTech.svg" alt="logo da Layers ponto tech"><a href="#" class="lista__rodape--link">Layers ponto Tech</a></li>
+                <li class="lista__rodape--item"><img src="./img/LikeABoss.svg" alt="logo da like a boss"><a href="#" class="lista__rodape--link">Like a Boss</a></li>
+                <li class="lista__rodape--item"><img src="./img/CarreiraSemFronteira.svg" alt="logo da carreira sem fronteiras"><a href="#" class="lista__rodape--link">Carreira sem fronteiras</a></li>
+                <li class="lista__rodape--item"><img src="./img/HipstersJobs.svg" alt="logo da hipsters ponto jobs"><a href="#" class="lista__rodape--link">Hipsters ponto Jobs</a></li>
+                <li class="lista__rodape--item"><img src="./img/GUJ.svg" alt="logo da GUJ"><a href="#" class="lista__rodape--link">Guj</a></li>
+            </ul>
+        </footer>
+
+        <!-- Define as propriedades dos swipers (fonte do swiper: Swiper Api) -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+        <!-- Edita os elementos dos swipers -->
+        <script>
+            const swiper = new Swiper('.swiper', {
+                spaceBetween: 50,
+                slidesPerView: 3,
+        
+                pagination: {
+                        el: '.swiper-pagination',
+                        type: 'bullets',
+                    },
+                    
+                    /* adiciona esse codigo abaixo */
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+          
+                });
+        </script>
+</body>
+</html>

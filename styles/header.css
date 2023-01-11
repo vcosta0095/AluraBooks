@@ -1,0 +1,272 @@
+/* Para adicionar e editar o menu hamburguer */
+.cabecalho__menu--hamburguer{
+
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    background-image: url(../img/Menu.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+/* Edita o cabeçalho por inteiro */
+.cabecalho{
+
+    background-color: var(--cor-branca-principal);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;  
+}
+
+/* Altera a cor das barras dentro do menu hamburguer */
+.container__menu:checked~.container__rotulo>.cabecalho__menu--hamburguer{
+
+    background-image: url(../img/Menu\ Aberto.svg);
+    
+}
+
+/* Altera a cor das barras dentro do menu hamburguer */
+.container__menu:checked ~.container__rotulo{
+
+    background-color: var(--cor-azul-principal);
+}
+
+
+
+/* Edita as divs(caixas) aonde estão localizados os pseudoelementos */
+.container{
+
+    display: flex;
+    align-items: center;
+}
+
+/* Edita as imagens/elementos */
+.container__imagem{
+
+    padding: 1em;
+}
+
+/* Edita o input. Por padrão ele não aparece na pagina, pois o checkbox não está marcado, portanto a lista ainda não aparece*/
+.container__menu{
+    
+    display: none;
+}
+
+/* Edita a lista.*/
+.lista__menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+/* Edita o input/lista. Aqui se o input do tipo checkbox estiver marcado ele busca a lista e aparece na pagina */
+.container__menu:checked~.lista__menu{
+
+    display: block;
+}
+
+.lista__menu{
+
+    background-color: var(--cor-branca-principal);
+    width: 60vw;
+}
+
+/* Edita o espaço do cabeçalho e do item do menu */
+.lista__menu--titulo, .lista__menu--item{
+
+    padding: 1em;
+}
+
+/* Edita a cor do titulo do menu hamburguer */
+.lista__menu--titulo{
+
+    color: var(--cor-amarela-principal);
+    font-weight: 700;
+}
+
+/* Edita a cor dos items do menu hamburguer */
+
+.lista__menu--link{
+
+    background: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-emphasis-color: transparent;
+    text-transform: uppercase;
+}
+
+/* Resposividade versão tablet */
+
+.cabecalho__titulo{
+
+    display: none;
+}
+
+.opcoes{
+
+    display: none;
+}
+
+.lista__botao__opcoes{
+
+    display: none;
+}
+
+.container__texto{
+
+    display: none;
+}
+
+
+@media screen and (min-width:1024px){
+
+    /* Edita o titulos */
+    .cabecalho__titulo, .cabecalho__titulo--negrito{
+
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+    }
+
+    .botao__opcoes:checked ~ .container__opcoes > .opcoes__item{
+
+        background-color: var(--cor-azul-principal);
+        -webkit-text-fill-color: var(--cor-branca-principal);
+    }
+
+
+
+    .cabecalho__titulo{
+
+        font-weight: 400;
+        display: block;
+    }
+
+    .cabecalho__titulo--negrito{
+
+        font-weight: 700;
+    }
+
+    /* Edita a lista com a classe opções na versão tablet */
+    .opcoes{
+
+        display: flex;
+        text-align: center;
+        
+    }
+
+    /* Edita o texto da lista */
+    .opcoes__item{
+
+        padding: 2em 1em;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    .opcoes__item__links{
+
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    /* Edita a segunda div da classe container, retirei o o botão de favoritos */
+    .container__imagem--transparente{
+
+        display: none;
+    }
+    .cabecalho__menu--hamburguer{
+        display: none;
+    }
+
+    /* Edita a lista da sessão categoria do cabecalho */
+    .botao__opcoes{
+
+        display: none;
+    }
+
+    /* Edita a lista de opções na sessão de categorias */
+
+    .lista__botao__opcoes{
+
+        position: absolute;
+        display: none;
+        top: 100%;
+        background-color: var(--cor-branca-principal);
+        width: auto;
+        
+    }
+
+    .lista__botao__opcoes--item{
+        
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        padding: 1em 1em;
+        background-color: var(--cor-branca-principal);
+    
+    }
+
+    .lista__botao__opcoes--link{
+
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: var(--cor-azul-principal);
+    }
+
+    .botao__opcoes:checked~.lista__botao__opcoes{
+
+        display: block;
+    }
+
+    /* Ao passar ou clicar na opção muda background utilizando hover */
+    .lista__botao__opcoes--item:hover{
+
+        background-color: var(--cor-azul-principal);
+    }
+    
+    /* Muda a cor do texto ao clicar nas opçoes  */
+    .lista__botao__opcoes--item:hover > .lista__botao__opcoes--link{
+
+        -webkit-text-fill-color: var(--cor-branca-principal);
+    }
+
+}
+
+/* Edita a versão desktop (1728px) */
+@media screen and (min-width: 1728px){
+
+    /* Edita o texto do cabeçalho (minha sacola e meu perfil) */
+    .container__texto{
+
+        display: flex;
+        align-items: center;
+        color: var(--cor-preta-principal);
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    /* Edita o cabeçalho */
+    .cabecalho{
+
+        padding: 0 2em;
+    }
+
+    /* Edita as opções do cabeçalho */
+    .opcoes{
+
+        margin-right: auto;
+    }
+
+   
+}
+
+
+
+
+

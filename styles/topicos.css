@@ -1,0 +1,79 @@
+/* Edita a caixa dos topicos */
+.topicos{
+
+    background: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Edita o titulo  */
+.topicos__titulo{
+
+    color: var(--cor-branca-principal);
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    margin: 1em 0 1em 0;
+
+}
+
+/* Edita a lista */
+.topicos__lista{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Edita o espaçamento externo da lista */
+.topicos__item{
+
+    margin: 2em 0.5em;
+}
+
+/* Edita os links da lista*/
+.topicos__link{
+
+    border: 1px solid transparent;
+    background-color: var(--cor-laranja-principal);
+    padding: 1em 1em;
+    font-weight: 700;
+    color: var(--cor-branca-principal);
+    
+}
+
+@media screen and (min-width: 1024px){
+
+    /* Edita o titulo dos topicos */
+    .topicos__titulo{
+
+        font-size: 24px;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    /* Edita os itens do topico */
+    .topicos__item{
+
+        margin: 2.5em 1em;
+        
+    }
+
+    /* Edita os links/textos dos topicos */
+    .topicos__link{
+
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1728px){
+
+
+    /* Edita a caixa dos topicos */
+    .topicos{
+
+        padding: 3em 30vw;
+    }
+
+    
+}

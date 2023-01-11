@@ -1,0 +1,92 @@
+/* Edita a linha entre o contato e o rodapé */
+hr{
+    margin: 0;
+}
+
+/* Edita a caixa do rodapé */
+.rodape{
+    background-color: var(--cor-branca-principal);
+    padding: 1em 1em;
+}
+
+/* Edita a caixa do texto */
+.rodape__texto{
+
+    color: var(--cor-preta-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.lista__rodape{
+
+    display: none;
+}
+
+/* Edita o footer na versão tablet */
+@media screen and (min-width: 1024px){
+
+    /* Edita o rodape */
+    .rodape{
+
+        display: flex;
+        justify-content: space-around;
+        
+    }
+
+    /* Edita a lista do rodape */
+    .lista__rodape{
+
+        display: block;
+    }
+
+    /* Edita o texto do rodape */
+    .rodape__texto{
+
+        font-size: 24px;
+
+    }
+
+    /* Edita o titulo do rodape */
+    .lista__rodape--titulo{
+
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: var(--cinza);
+        margin-bottom: 1em;
+    }
+
+    /* Edita cada item da lista do rodape */
+    .lista__rodape--item{
+
+        display: flex;
+        align-items: center;
+        padding: 0.5em 0 0.5em 0;
+    }
+
+    /* Edita o texto dos itens da lista do rodape */
+
+    .lista__rodape--link{
+        color: var(--cinza-escuro);
+        font-size: 14px;
+        font-weight: 400;
+        margin-left: 0.6em;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+
+
+    /* Edita a lista do rodape */
+    .lista__rodape{
+
+        border-left: 1px solid var(--cinza);
+        padding-left: 1em;
+    }
+
+    /* Edita a caixa do rodape */
+    .rodape{
+
+        padding: 3em 0;
+    }
+}
